@@ -21,11 +21,11 @@ def print_num():
     i = 0
     while i < 11:
         print i
-        i += 1 
+        i += 1
 
     for i in range(0,11):
         print i
-    
+
 
 # 2-6
 # num = 5
@@ -46,25 +46,25 @@ def print_str():
     length = len(string)
     while i < length:
         print string[i]
-        i += 1  # equal to i = i + 1                              
-    
+        i += 1  # equal to i = i + 1
+
     for word in string:
         print word
 
-        
 
-# 2-8  
-def num_sum():      
+
+# 2-8
+def num_sum():
     nums = [1,2,4,3,5]
     # use while
     i = 0
     sum = 0
     length = len(nums)
     while i < length:
-        sum += nums[i]  # equal to i = i + 1                              
+        sum += nums[i]  # equal to i = i + 1
         i += 1
     print sum
-    
+
     # use for
     sum2 = 0
     for num in nums:
@@ -80,17 +80,17 @@ def num_sum2():
     sum = 0
     length = len(num)
     while i < length:
-        sum += int(num[i])  # equal to i = i + 1                              
+        sum += int(num[i])  # equal to i = i + 1
         i += 1
     print sum
-    
+
     # use for
     sum2 = 0
     for i in num:
         sum2 += int(i)
     print sum2
-   
-    
+
+
 # 2-9
 def average():
     nums = [1,2,3,4,6]
@@ -101,15 +101,15 @@ def average():
     # division
     result = float(sum) / float(len(nums))
     print result
-    
-    
+
+
 # 2-10
-def judge_input(): 
+def judge_input():
     while True:
         number = int(raw_input("Enter a number(1~100):"))
         if number in range(1,101):
             print "Done"
-            break 
+            break
         else:
             print "Wrong number!"
 
@@ -123,7 +123,7 @@ def calculate():
         (x)quit
         Enter the key in the brackets.
         """
-        
+
         choose = raw_input(">")
         if choose == "1":
             nums = raw_input("Enter five number,split with space:")
@@ -132,10 +132,10 @@ def calculate():
             sum = 0
             length = len(num)
             while i < length:
-                sum += int(num[i])                            
+                sum += int(num[i])
                 i += 1
             print "The sum is:",sum
-            
+
         elif choose == "2":
             nums = raw_input("Enter five number,split with space:")
             num = nums.split()
@@ -144,7 +144,7 @@ def calculate():
                 sum += int(i)
             result = float(sum) / float(len(num))
             print "The average is:",result
-            
+
         else:
             print "Bye"
             running = False
@@ -154,10 +154,12 @@ def sequence():
     num1 = int(raw_input("Number1:"))
     num2 = int(raw_input("Number2:"))
     num3 = int(raw_input("Number3:"))
+    max_num = max(num1,num2,num3)
+    mid_num = min(max(num1,num2),max(num1,num3),max(num2,num3))
+    min_num = min(num1,num2,num3)
 
     # from biggest to smallest
-    print max(num1,num2,num3),min(max(num1,num2),max(num1,num2),max(num2,num3)),min(num1,num2,num3)
+    print max_num, mid_num, min_num
 
     # from smallest to biggest
-    print min(num1,num2,num3),min(max(num1,num2),max(num1,num2),max(num2,num3)),max(num1,num2,num3)
-                
+    print min_num, mid_num, max_num
