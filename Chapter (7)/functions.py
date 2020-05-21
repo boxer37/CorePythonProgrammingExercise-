@@ -1,4 +1,4 @@
-# _*_ coding:utf-8 _*_ 
+# _*_ coding:utf-8 _*_
 
 
 # 7-1
@@ -18,7 +18,7 @@ def dict_index():
         print s[key]    # (b)
 
     for value in values:
-        print s[value]  #(c)
+        print value  #(c)
 
 
 # 7-4

@@ -1,19 +1,19 @@
-# _*_ coding:utf-8 _*_ 
+# _*_ coding:utf-8 _*_
 
 # 5-3
 
 def rank(score):
-    if score in range(90,101):
+    if score>=90:
         return "A"
-    elif score in range(80,90):
+    elif score>=80:
         return "B"
-    elif score in range(70,80):
+    elif score>=70:
         return "C"
-    elif score in range(60,70):
+    elif score>=60:
         return "D"
-    elif score < 60:
+    else:
         return "F"
-        
+
 def main():
     try:
         score = int(raw_input("Enter a score: "))
@@ -25,6 +25,6 @@ def main():
     except:
         print "Something was wrong, please enter a number! "
         main()
-            
+
 if __name__ == "__main__":
     main()
